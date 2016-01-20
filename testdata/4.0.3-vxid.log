@@ -1,0 +1,81 @@
+*   << BeReq    >> 3         
+-   Begin          bereq 2 fetch
+-   Timestamp      Start: 1453298576.193479 0.000000 0.000000
+-   BereqMethod    GET
+-   BereqURL       /startup/417
+-   BereqProtocol  HTTP/1.1
+-   BereqHeader    Host: 127.0.0.1:61359
+-   BereqHeader    User-Agent: Go-http-client/1.1
+-   BereqHeader    Accept-Encoding: gzip
+-   BereqHeader    X-Forwarded-For: 127.0.0.1
+-   BereqHeader    X-Varnish: 3
+-   VCL_call       BACKEND_FETCH
+-   VCL_return     fetch
+-   BackendOpen    9 default(127.0.0.1,,61358) 127.0.0.1 61365 
+-   Backend        9 default default(127.0.0.1,,61358)
+-   Timestamp      Bereq: 1453298576.193885 0.000406 0.000406
+-   Timestamp      Beresp: 1453298576.194450 0.000971 0.000565
+-   BerespProtocol HTTP/1.1
+-   BerespStatus   417
+-   BerespReason   Expectation Failed
+-   BerespHeader   Date: Wed, 20 Jan 2016 14:02:56 GMT
+-   BerespHeader   Content-Length: 0
+-   BerespHeader   Content-Type: text/plain; charset=utf-8
+-   TTL            RFC -1 -1 -1 1453298576 1453298576 1453298576 0 0
+-   VCL_call       BACKEND_RESPONSE
+-   TTL            VCL 120 10 0 1453298576
+-   VCL_return     deliver
+-   Storage        malloc Transient
+-   ObjProtocol    HTTP/1.1
+-   ObjStatus      417
+-   ObjReason      Expectation Failed
+-   ObjHeader      Date: Wed, 20 Jan 2016 14:02:56 GMT
+-   ObjHeader      Content-Length: 0
+-   ObjHeader      Content-Type: text/plain; charset=utf-8
+-   Fetch_Body     3 length stream
+-   BackendReuse   9 default(127.0.0.1,,61358)
+-   Timestamp      BerespBody: 1453298576.194684 0.001205 0.000234
+-   Length         0
+-   BereqAcct      149 0 149 132 0 132
+-   End            
+
+*   << Request  >> 2         
+-   Begin          req 1 rxreq
+-   Timestamp      Start: 1453298576.193320 0.000000 0.000000
+-   Timestamp      Req: 1453298576.193320 0.000000 0.000000
+-   ReqStart       127.0.0.1 61364
+-   ReqMethod      GET
+-   ReqURL         /startup/417
+-   ReqProtocol    HTTP/1.1
+-   ReqHeader      Host: 127.0.0.1:61359
+-   ReqHeader      User-Agent: Go-http-client/1.1
+-   ReqHeader      Accept-Encoding: gzip
+-   ReqHeader      X-Forwarded-For: 127.0.0.1
+-   VCL_call       RECV
+-   VCL_return     hash
+-   VCL_call       HASH
+-   VCL_return     lookup
+-   Debug          "XXXX MISS"
+-   VCL_call       MISS
+-   VCL_return     fetch
+-   Link           bereq 3 fetch
+-   Timestamp      Fetch: 1453298576.194686 0.001366 0.001366
+-   RespProtocol   HTTP/1.1
+-   RespStatus     417
+-   RespReason     Expectation Failed
+-   RespHeader     Date: Wed, 20 Jan 2016 14:02:56 GMT
+-   RespHeader     Content-Length: 0
+-   RespHeader     Content-Type: text/plain; charset=utf-8
+-   RespHeader     X-Varnish: 2
+-   RespHeader     Age: 0
+-   RespHeader     Via: 1.1 varnish-v4
+-   VCL_call       DELIVER
+-   VCL_return     deliver
+-   Timestamp      Process: 1453298576.194751 0.001431 0.000065
+-   Debug          "RES_MODE 2"
+-   RespHeader     Connection: keep-alive
+-   Timestamp      Resp: 1453298576.194806 0.001486 0.000055
+-   Debug          "XXX REF 2"
+-   ReqAcct        107 0 107 199 0 199
+-   End            
+

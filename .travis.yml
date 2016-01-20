@@ -1,0 +1,19 @@
+sudo: required
+dist: trusty
+language: go
+
+# env:
+#   matrix:
+#     - VARNISH=4.0
+#     - VARNISH=4.1
+#   global:
+#     - SUDO=true
+
+go: 1.5.3
+
+# before_install:
+#   - curl https://repo.varnish-cache.org/GPG-key.txt | sudo apt-key add -
+#   - sudo apt-add-repository "deb https://repo.varnish-cache.org/ubuntu/ trusty varnish-$VARNISH"
+#   - sudo apt-get update -y
+#   - sudo apt-get install -y varnish
+#   - sudo service varnish stop

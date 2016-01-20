@@ -1,0 +1,236 @@
+*   << Session  >> 32769     
+-   Begin          sess 0 HTTP/1
+-   SessOpen       127.0.0.1 61402 127.0.0.1:61394 127.0.0.1 61394 1453298651.357761 12
+-   Link           req 32770 rxreq
+-   Link           req 32772 rxreq
+-   Link           req 32774 rxreq
+-   SessClose      REM_CLOSE 0.003
+-   End            
+**  << Request  >> 32770     
+--  Begin          req 32769 rxreq
+--  Timestamp      Start: 1453298651.358068 0.000000 0.000000
+--  Timestamp      Req: 1453298651.358068 0.000000 0.000000
+--  ReqStart       127.0.0.1 61402
+--  ReqMethod      GET
+--  ReqURL         /200
+--  ReqProtocol    HTTP/1.1
+--  ReqHeader      Host: 127.0.0.1:61394
+--  ReqHeader      User-Agent: Go-http-client/1.1
+--  ReqHeader      Accept-Encoding: gzip
+--  ReqHeader      X-Forwarded-For: 127.0.0.1
+--  VCL_call       RECV
+--  VCL_return     hash
+--  VCL_call       HASH
+--  VCL_return     lookup
+--  VCL_call       MISS
+--  VCL_return     fetch
+--  Link           bereq 32771 fetch
+--  Timestamp      Fetch: 1453298651.358620 0.000552 0.000552
+--  RespProtocol   HTTP/1.1
+--  RespStatus     200
+--  RespReason     OK
+--  RespHeader     Date: Wed, 20 Jan 2016 14:04:11 GMT
+--  RespHeader     Content-Length: 0
+--  RespHeader     Content-Type: text/plain; charset=utf-8
+--  RespHeader     X-Varnish: 32770
+--  RespHeader     Age: 0
+--  RespHeader     Via: 1.1 varnish-v4
+--  VCL_call       DELIVER
+--  VCL_return     deliver
+--  Timestamp      Process: 1453298651.358647 0.000579 0.000027
+--  RespHeader     Accept-Ranges: bytes
+--  Debug          "RES_MODE 2"
+--  RespHeader     Connection: keep-alive
+--  Timestamp      Resp: 1453298651.358676 0.000608 0.000029
+--  ReqAcct        99 0 99 209 0 209
+--  End            
+**  << Request  >> 32772     
+--  Begin          req 32769 rxreq
+--  Timestamp      Start: 1453298651.358887 0.000000 0.000000
+--  Timestamp      Req: 1453298651.358887 0.000000 0.000000
+--  ReqStart       127.0.0.1 61402
+--  ReqMethod      GET
+--  ReqURL         /404
+--  ReqProtocol    HTTP/1.1
+--  ReqHeader      Host: 127.0.0.1:61394
+--  ReqHeader      User-Agent: Go-http-client/1.1
+--  ReqHeader      Accept-Encoding: gzip
+--  ReqHeader      X-Forwarded-For: 127.0.0.1
+--  VCL_call       RECV
+--  VCL_return     hash
+--  VCL_call       HASH
+--  VCL_return     lookup
+--  VCL_call       MISS
+--  VCL_return     fetch
+--  Link           bereq 32773 fetch
+--  Timestamp      Fetch: 1453298651.359542 0.000655 0.000655
+--  RespProtocol   HTTP/1.1
+--  RespStatus     404
+--  RespReason     Not Found
+--  RespHeader     Date: Wed, 20 Jan 2016 14:04:11 GMT
+--  RespHeader     Content-Length: 0
+--  RespHeader     Content-Type: text/plain; charset=utf-8
+--  RespHeader     X-Varnish: 32772
+--  RespHeader     Age: 0
+--  RespHeader     Via: 1.1 varnish-v4
+--  VCL_call       DELIVER
+--  VCL_return     deliver
+--  Timestamp      Process: 1453298651.359574 0.000687 0.000032
+--  Debug          "RES_MODE 2"
+--  RespHeader     Connection: keep-alive
+--  Timestamp      Resp: 1453298651.359616 0.000729 0.000042
+--  ReqAcct        99 0 99 194 0 194
+--  End            
+**  << Request  >> 32774     
+--  Begin          req 32769 rxreq
+--  Timestamp      Start: 1453298651.359811 0.000000 0.000000
+--  Timestamp      Req: 1453298651.359811 0.000000 0.000000
+--  ReqStart       127.0.0.1 61402
+--  ReqMethod      GET
+--  ReqURL         /500
+--  ReqProtocol    HTTP/1.1
+--  ReqHeader      Host: 127.0.0.1:61394
+--  ReqHeader      User-Agent: Go-http-client/1.1
+--  ReqHeader      Accept-Encoding: gzip
+--  ReqHeader      X-Forwarded-For: 127.0.0.1
+--  VCL_call       RECV
+--  VCL_return     hash
+--  VCL_call       HASH
+--  VCL_return     lookup
+--  VCL_call       MISS
+--  VCL_return     fetch
+--  Link           bereq 32775 fetch
+--  Timestamp      Fetch: 1453298651.360294 0.000483 0.000483
+--  RespProtocol   HTTP/1.1
+--  RespStatus     500
+--  RespReason     Internal Server Error
+--  RespHeader     Date: Wed, 20 Jan 2016 14:04:11 GMT
+--  RespHeader     Content-Length: 0
+--  RespHeader     Content-Type: text/plain; charset=utf-8
+--  RespHeader     X-Varnish: 32774
+--  RespHeader     Age: 0
+--  RespHeader     Via: 1.1 varnish-v4
+--  VCL_call       DELIVER
+--  VCL_return     deliver
+--  Timestamp      Process: 1453298651.360324 0.000513 0.000030
+--  Debug          "RES_MODE 2"
+--  RespHeader     Connection: keep-alive
+--  Timestamp      Resp: 1453298651.360355 0.000544 0.000031
+--  ReqAcct        99 0 99 206 0 206
+--  End            
+*** << BeReq    >> 32771     
+--- Begin          bereq 32770 fetch
+--- Timestamp      Start: 1453298651.358148 0.000000 0.000000
+--- BereqMethod    GET
+--- BereqURL       /200
+--- BereqProtocol  HTTP/1.1
+--- BereqHeader    Host: 127.0.0.1:61394
+--- BereqHeader    User-Agent: Go-http-client/1.1
+--- BereqHeader    Accept-Encoding: gzip
+--- BereqHeader    X-Forwarded-For: 127.0.0.1
+--- BereqHeader    X-Varnish: 32771
+--- VCL_call       BACKEND_FETCH
+--- VCL_return     fetch
+--- BackendOpen    13 boot.default 127.0.0.1 61393 127.0.0.1 61398
+--- Timestamp      Bereq: 1453298651.358232 0.000084 0.000084
+--- Timestamp      Beresp: 1453298651.358516 0.000368 0.000284
+--- BerespProtocol HTTP/1.1
+--- BerespStatus   200
+--- BerespReason   OK
+--- BerespHeader   Date: Wed, 20 Jan 2016 14:04:11 GMT
+--- BerespHeader   Content-Length: 0
+--- BerespHeader   Content-Type: text/plain; charset=utf-8
+--- TTL            RFC 120 10 -1 1453298651 1453298651 1453298651 0 0
+--- VCL_call       BACKEND_RESPONSE
+--- VCL_return     deliver
+--- Storage        malloc s0
+--- ObjProtocol    HTTP/1.1
+--- ObjStatus      200
+--- ObjReason      OK
+--- ObjHeader      Date: Wed, 20 Jan 2016 14:04:11 GMT
+--- ObjHeader      Content-Length: 0
+--- ObjHeader      Content-Type: text/plain; charset=utf-8
+--- Fetch_Body     0 none -
+--- BackendReuse   13 boot.default
+--- Timestamp      BerespBody: 1453298651.358598 0.000450 0.000082
+--- Length         0
+--- BereqAcct      145 0 145 116 0 116
+--- End            
+*** << BeReq    >> 32773     
+--- Begin          bereq 32772 fetch
+--- Timestamp      Start: 1453298651.359012 0.000000 0.000000
+--- BereqMethod    GET
+--- BereqURL       /404
+--- BereqProtocol  HTTP/1.1
+--- BereqHeader    Host: 127.0.0.1:61394
+--- BereqHeader    User-Agent: Go-http-client/1.1
+--- BereqHeader    Accept-Encoding: gzip
+--- BereqHeader    X-Forwarded-For: 127.0.0.1
+--- BereqHeader    X-Varnish: 32773
+--- VCL_call       BACKEND_FETCH
+--- VCL_return     fetch
+--- BackendOpen    13 boot.default 127.0.0.1 61393 127.0.0.1 61398
+--- Timestamp      Bereq: 1453298651.359129 0.000117 0.000117
+--- Timestamp      Beresp: 1453298651.359420 0.000408 0.000291
+--- BerespProtocol HTTP/1.1
+--- BerespStatus   404
+--- BerespReason   Not Found
+--- BerespHeader   Date: Wed, 20 Jan 2016 14:04:11 GMT
+--- BerespHeader   Content-Length: 0
+--- BerespHeader   Content-Type: text/plain; charset=utf-8
+--- TTL            RFC 120 10 -1 1453298651 1453298651 1453298651 0 0
+--- VCL_call       BACKEND_RESPONSE
+--- VCL_return     deliver
+--- Storage        malloc s0
+--- ObjProtocol    HTTP/1.1
+--- ObjStatus      404
+--- ObjReason      Not Found
+--- ObjHeader      Date: Wed, 20 Jan 2016 14:04:11 GMT
+--- ObjHeader      Content-Length: 0
+--- ObjHeader      Content-Type: text/plain; charset=utf-8
+--- Fetch_Body     0 none -
+--- BackendReuse   13 boot.default
+--- Timestamp      BerespBody: 1453298651.359502 0.000490 0.000082
+--- Length         0
+--- BereqAcct      145 0 145 123 0 123
+--- End            
+*** << BeReq    >> 32775     
+--- Begin          bereq 32774 fetch
+--- Timestamp      Start: 1453298651.359897 0.000000 0.000000
+--- BereqMethod    GET
+--- BereqURL       /500
+--- BereqProtocol  HTTP/1.1
+--- BereqHeader    Host: 127.0.0.1:61394
+--- BereqHeader    User-Agent: Go-http-client/1.1
+--- BereqHeader    Accept-Encoding: gzip
+--- BereqHeader    X-Forwarded-For: 127.0.0.1
+--- BereqHeader    X-Varnish: 32775
+--- VCL_call       BACKEND_FETCH
+--- VCL_return     fetch
+--- BackendOpen    13 boot.default 127.0.0.1 61393 127.0.0.1 61398
+--- Timestamp      Bereq: 1453298651.359964 0.000067 0.000067
+--- Timestamp      Beresp: 1453298651.360185 0.000288 0.000221
+--- BerespProtocol HTTP/1.1
+--- BerespStatus   500
+--- BerespReason   Internal Server Error
+--- BerespHeader   Date: Wed, 20 Jan 2016 14:04:11 GMT
+--- BerespHeader   Content-Length: 0
+--- BerespHeader   Content-Type: text/plain; charset=utf-8
+--- TTL            RFC -1 10 -1 1453298651 1453298651 1453298651 0 0
+--- VCL_call       BACKEND_RESPONSE
+--- TTL            VCL 120 10 0 1453298651
+--- VCL_return     deliver
+--- Storage        malloc Transient
+--- ObjProtocol    HTTP/1.1
+--- ObjStatus      500
+--- ObjReason      Internal Server Error
+--- ObjHeader      Date: Wed, 20 Jan 2016 14:04:11 GMT
+--- ObjHeader      Content-Length: 0
+--- ObjHeader      Content-Type: text/plain; charset=utf-8
+--- Fetch_Body     0 none -
+--- BackendReuse   13 boot.default
+--- Timestamp      BerespBody: 1453298651.360262 0.000365 0.000077
+--- Length         0
+--- BereqAcct      145 0 145 135 0 135
+--- End            
+
